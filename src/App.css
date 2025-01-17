@@ -97,7 +97,7 @@ html {
 
 .section h1 {
     color: white;
-    font-size: 2.5rem;
+    /* font-size: 2.5rem; */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     text-align: center;
     width: fit-content;

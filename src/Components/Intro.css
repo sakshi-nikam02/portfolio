@@ -15,7 +15,7 @@
 }
 
 .introName {
-  font-size: 4rem;
+  font-size: 1.2rem;
   margin: 0;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -23,7 +23,7 @@
 }
 
 .introSubtitle {
-  font-size: 2rem;
+  font-size: 1.2rem;
   margin: 0.8rem 0 .5rem 0;
   font-weight: 300;
   letter-spacing: 1px;
@@ -37,8 +37,8 @@
 }
 
 .card {
-  width: 400px;
-  height: 350px;
+  width: 350px;
+  height: 320px;
   perspective: 1000px;
 }
 
@@ -51,7 +51,8 @@
 }
 
 .card:hover .cardInner {
-  transform: rotateY(180deg); /* Card flip on hover */
+  transform: rotateY(180deg);
+  /* Card flip on hover */
 }
 
 .cardFront,
@@ -64,18 +65,19 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: bold;
   background-color: #fff6d0;
   border-radius: 10px;
   color: #ff6347;
+  text-shadow: none;
 }
 
 .cardBack {
   transform: rotateY(180deg);
   background-color: black;
   font-family: 'Arial', sans-serif;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-style: italic;
   color: #fff;
 }
@@ -86,12 +88,12 @@
 }
 
 .cardBack p {
-  font-size: 1.2rem;
+  font-size: .9rem;
   padding: 1rem;
 }
 
 .personalPhilosophy {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-style: italic;
   color: #fff;
   margin-top: 3rem;
@@ -99,11 +101,25 @@
 }
 
 @keyframes slideIn {
-  0% { transform: translateY(-50px); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {
-  0% { transform: translateY(30px); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

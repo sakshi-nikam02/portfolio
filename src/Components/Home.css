@@ -22,7 +22,7 @@ body {
 }
 
 .welcome-text {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   color: #1e3c72;
   font-weight: bold;
   opacity: 0; /* Start with text hidden */
