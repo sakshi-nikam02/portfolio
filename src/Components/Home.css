@@ -14,50 +14,113 @@ body {
   align-items: center;
   height: 100vh;
   overflow: hidden;
+  background: linear-gradient(135deg, #ff6347, #ffe600); /* Dynamic background */
+}
+
+.home-container {
+  text-align: center;
+  animation: fadeIn 1.5s ease-out forwards;
+  position: relative;
+  z-index: 2;
 }
 
 .welcome-container {
-  text-align: center;
-  animation: fadeIn 1.5s ease-out forwards;
+  max-width: 80%;
+  margin: 0 auto;
+  animation: welcomeTextAnimation 2s ease-out forwards;
 }
 
 .welcome-text {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #1e3c72;
   font-weight: bold;
-  opacity: 0; /* Start with text hidden */
-  animation: welcomeTextAnimation 1.5s ease-out forwards; /* Apply custom animation */
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .main-text span {
   color: #ff6347;
   font-style: italic;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .humor-text {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin-top: 30px;
   color: #ffff2a;
-  animation: slideIn 1s ease-out forwards;
+  animation: slideIn 2s ease-out forwards;
+  letter-spacing: 1px;
+  font-style: italic;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.warning-container {
+  background-color: #ffeb3b;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 2px dashed #f44336;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  width: 50rem; /* Set the width to 60rem */
+  margin-left: auto;
+  margin-right: auto; /* Center the container horizontally */
+  animation: slideIn 1s ease-out, pulse 1.5s infinite;
+}
+
+.warning-container .warning-text {
+  font-family: 'Comic Sans MS', sans-serif;
+  color: #e91e63;
+  font-size: 1rem;
+  text-align: center;
+  text-shadow: none;
+}
+
+.warning-container .warning-text span {
+  font-style: italic;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
 }
 
 .animated-circles {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 70px;
 }
 
 .circle {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   background-color: #ff6347;
-  margin: 0 10px;
+  margin: 0 15px;
   animation: bounce 2s infinite;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Animations */
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -71,11 +134,11 @@ body {
 @keyframes welcomeTextAnimation {
   0% {
     opacity: 0;
-    transform: translateY(30px); /* Start from below */
+    transform: translateY(30px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0); /* End at normal position */
+    transform: translateY(0);
   }
 }
 
@@ -95,6 +158,6 @@ body {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-30px);
   }
 }

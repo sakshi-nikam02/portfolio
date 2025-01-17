@@ -68,7 +68,7 @@ function Skills() {
         animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
         transition={{ duration: 1.5 }}
       >
-        "Skills so sharp, they might just hack through your screen!"
+        "Faster than a browser refresh, more powerful than a JavaScript closure!"
       </motion.p>
       <div className="skillsGrid">
         {skills.map((skill, index) => (
