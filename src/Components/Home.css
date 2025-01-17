@@ -22,7 +22,7 @@ body {
 }
 
 .welcome-text {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #1e3c72;
   font-weight: bold;
   opacity: 0; /* Start with text hidden */
@@ -35,7 +35,7 @@ body {
 }
 
 .humor-text {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-top: 30px;
   color: #ffff2a;
   animation: slideIn 1s ease-out forwards;
