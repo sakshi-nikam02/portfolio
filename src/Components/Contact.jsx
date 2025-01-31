@@ -56,6 +56,12 @@ const Contact = () => {
       <p className="contact-footer">
         PS: If you spot a bug in my portfolio, it's probably an "easter egg." 😉
       </p>
+
+      <div>
+        <div className="circle one"></div>
+        <div className="circle two"></div>
+        <div className="circle three"></div>
+      </div>
     </div>
   );
 };

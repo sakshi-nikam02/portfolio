@@ -132,6 +132,12 @@ function Intro() {
       >
         “Code is not just syntax; it’s creativity in motion.”
       </motion.p>
+
+      <div>
+        <div className="circle one"></div>
+        <div className="circle two"></div>
+        <div className="circle three"></div>
+      </div>
     </div>
   );
 }

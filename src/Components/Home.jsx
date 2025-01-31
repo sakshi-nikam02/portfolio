@@ -1,54 +1,54 @@
-import React, { useEffect, useState } from 'react';
-import Typing from 'react-typing-effect';
+import React, { useEffect } from "react";
 import './Home.css';
+import mee from '../assets/mee.png';
 
-const Home = () => {
-  const [showText, setShowText] = useState(false);
-
+const HomePage = () => {
   useEffect(() => {
-    setTimeout(() => {
-      setShowText(true);
-    }, 1000); // Delay before showing the text
+    const textAnimations = document.querySelectorAll(".animate-text");
+    textAnimations.forEach((text, index) => {
+      setTimeout(() => {
+        text.classList.add("fade-in");
+      }, index * 400);
+    });
   }, []);
 
   return (
-    <div className="home-container">
-      <div className="welcome-container">
-        <div className="welcome-text">
-          {showText && (
-            <h1 className="main-text">
-              Welcome to My World, <span>Where Code Meets Creativity!</span>
-            </h1>
-          )}
-        </div>
+    <div className="homepage">
+      <div className="content">
+        <div className="intro">
+          <div className="text-content animate-text">
 
-        {/* Humor text with typing effect */}
-        <div className="humor-text">
-          <Typing
-            speed={100}
-            eraseSpeed={50}
-            eraseDelay={1000}
-            typingDelay={500}
-            text={["Heads up: A burst of creativity and a hiring urge might follow your visit!"]}
-          />
-        </div>
-
-        <div class="warning-container">
-          <div class="warning-text">
-            <span>Warning: This site is currently more of a desktop show!</span> <br />
-            Mobile responsiveness is under construction — it's coming soon! <span>📱🔧</span>
+          <h1 data-testId = "headerText">Hey there, I'm <span className="highlight" style={{color:'yellow',fontSize:'3.3rem'}}>Sakshi</span>!</h1>
+          <p className="highlight">Your local Frontend Developer (and part-time code therapist for buggy JavaScript).</p>
+          <p className="highlight">With 4 years of experience, I’ve mastered:</p>
+          <p className="highlight">Writing code that works (and fixing it when it doesn’t).</p>
+          <p className="highlight">Arguing with CSS until it listens.</p>
+          <p className="highlight">Making websites so fun they’re borderline addictive.</p>
+          <p className="highlight" style={{color:'white'}}>My curly hair handles more tangles than your JSON files.</p>
+           
+           
+            <div className="call-to-action">
+              <p>Let's build something amazing together!</p>
+              <h1>Hire Me</h1>
+            </div>
+          </div>
+          <div className="image-container animate-text">
+            <img
+              src={mee} 
+              alt="Frontend Developer"
+              className="profile-image"
+            />
           </div>
         </div>
+      </div>
 
-        {/* Animated circles */}
-        <div className="animated-circles">
-          <div className="circle" style={{ animationDelay: '0s' }}></div>
-          <div className="circle" style={{ animationDelay: '0.5s' }}></div>
-          <div className="circle" style={{ animationDelay: '1s' }}></div>
-        </div>
+      <div className="background-animation">
+        <div className="circle one"></div>
+        <div className="circle two"></div>
+        <div className="circle three"></div>
       </div>
     </div>
   );
 };
 
-export default Home;
+export default HomePage;
