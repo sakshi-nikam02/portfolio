@@ -60,7 +60,7 @@ body {
 .highlight {
   color: #fffc5b;
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 .image-container {
@@ -71,7 +71,7 @@ body {
 }
 
 .profile-image {
-  max-width: 100%;
+  width: 21rem;
   height: auto;
   transition: transform 0.3s ease;
 }
