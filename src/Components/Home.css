@@ -65,8 +65,8 @@ body {
 
 .image-container {
   position: absolute;
-  bottom: -10rem;
-  left: -21.5rem;
+  bottom: -7rem;
+  left: -16rem;
   z-index: 5;
 }
 
